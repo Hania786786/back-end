@@ -47,7 +47,7 @@ const deleteOrder = async (req, res) => {
 
 // fetchAllOrders for admin 
 const fetchAllOrders = async (req, res) => {
-    // TODO: response 200 but displaying null
+    // TODO: Test this api
    let query = Order.find({deleted:{$ne:true}});
    let totalOrdersQuery = Order.find({deleted:{$ne:true}});
   
