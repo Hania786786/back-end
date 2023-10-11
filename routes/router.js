@@ -23,6 +23,8 @@ const createOrder = require("../controllers/Order");
 const getOrdersByUserId = require("../controllers/Order");
 const updateOrder = require("../controllers/Order");
 const deleteOrder = require("../controllers/Order");
+const fetchAllOrders = require("../controllers/Order");
+
 
 
 /* ==================
@@ -78,5 +80,10 @@ router.post("/orders", createOrder);
 router.get("/orders", getOrdersByUserId);
 router.get("/orders/:id", deleteOrder);
 router.patch("/orders/:id", updateOrder);
+
+/* ==================
+             admin order routes
+             ======================*/
+router.get("/orders", fetchAllOrders);
 
 module.exports = router;
