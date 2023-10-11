@@ -16,12 +16,17 @@ const createProduct = async (req, res) => {
   }
 };
 
-
+//            User base
 // fetch all products -- get -- read 
 const fetchAllProducts = async (req, res) => {
    // TODO: response 200 but displaying null
-  let query = Product.find({deleted:{$ne:true}});
-  let totalProductsQuery = Product.find({deleted:{$ne:true}});
+
+  let condition = {};
+  if(!req.query.admin){
+    condition.deleted = true;
+  }
+  let query = Product.find(condition);
+  let totalProductsQuery = Product.find(condition);
 
   // category filter
   if(req.query.category){
@@ -85,8 +90,8 @@ const updateProduct = async (req, res) => {
   }
 };
 
-
 module.exports = createProduct;
 module.exports = fetchAllProducts;
 module.exports = fetchProductById;
 module.exports = updateProduct;
+
