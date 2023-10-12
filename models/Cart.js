@@ -1,9 +1,11 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-
 const cartSchema = new mongoose.Schema({
-  title: { type: String, required: true },
+  title: {
+    type: String,
+    required: true,
+  },
   price: {
     type: Number,
     required: true,
@@ -17,28 +19,44 @@ const cartSchema = new mongoose.Schema({
     max: [100, "Discount must be less than or equal to 100%"],
   },
 
-  brand: { type: String, required: true },
-  category: { type: String, required: true },
+  brand: {
+    type: String,
+    required: true,
+  },
+  category: {
+    type: String,
+    required: true,
+  },
   thumbnail: {
     type: String,
     required: true,
     max: [1, "Thumbnail must be less than or equal to 1"],
   },
-  quantity: { type: Number, required:true},
-  userId: { type: Schema.Types.ObjectId, ref: "User", required:true},
-  productId: { type: Schema.Types.ObjectId, ref: "Product", required:true},
+  quantity: { type: Number, required: true },
+  userId: {
+    type: Schema.Types.ObjectId,
+    ref: "User",
+    required: true,
+  },
+  productId: {
+    type: Schema.Types.ObjectId,
+    ref: "Product",
+    required: true,
+  },
   // This works like foreign key.
 });
 
 // Turning _id to id
 const virtual = cartSchema.virtual("id");
-virtual.get(()=>{
+virtual.get(() => {
   return this._id;
 });
 cartSchema.set("toJSON", {
   virtuals: true,
   versionKey: false,
-  transform: (doc, ret) => {delete ret._id}
+  transform: (doc, ret) => {
+    delete ret._id;
+  },
 });
 
 const Cart = mongoose.model("Cart", cartSchema);
