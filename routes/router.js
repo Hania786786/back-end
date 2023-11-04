@@ -1,89 +1,81 @@
 const express = require("express");
-const router = new express.Router();
+const router = express.Router();
 require("../config/conn");
 // importing controllers
-const createProduct = require("../controllers/Product");
-const fetchAllProducts = require("../controllers/Product");
-const fetchProductById = require("../controllers/Product");
-const updateProduct = require("../controllers/Product");
-const fetchBrands = require("../controllers/Brand");
-const createBrand = require("../controllers/Brand");
-const createCategory = require("../controllers/Category");
-const fetchCategories = require("../controllers/Category");
-const fetchUserById = require("../controllers/User");
-const updateUserById = require("../controllers/User");
-const createUser = require("../controllers/User");
-const loginUser = require("../controllers/User");
-const addToCart = require("../controllers/Cart");
-const getItemsByUserId = require("../controllers/Cart");
-const updateCart = require("../controllers/Cart");
-const deleteItemFromCart = require("../controllers/Cart");
-const resetCart = require("../controllers/Cart");
-const createOrder = require("../controllers/Order");
-const getOrdersByUserId = require("../controllers/Order");
-const updateOrder = require("../controllers/Order");
-const deleteOrder = require("../controllers/Order");
-const fetchAllOrders = require("../controllers/Order");
-
-
+const productController = require("../controllers/Product");
+// const createProduct = require("../controllers/Product");
+// const fetchAllProducts = require("../controllers/Product");
+// const fetchProductById = require("../controllers/Product");
+// const updateProduct = require("../controllers/Product");
+const brandController = require("../controllers/Brand");
+// const createBrand = require("../controllers/Brand");
+const categoryController = require("../controllers/Category");
+// const fetchCategories = require("../controllers/Category");
+const userController = require("../controllers/User");
+const cartController = require("../controllers/Cart");
+// const getItemsByUserId = require("../controllers/Cart");
+// const updateCart = require("../controllers/Cart");
+// const deleteItemFromCart = require("../controllers/Cart");
+// const resetCart = require("../controllers/Cart");
+const orderController = require("../controllers/Order");
+// const getOrdersByUserId = require("../controllers/Order");
+// const updateOrder = require("../controllers/Order");
+// const deleteOrder = require("../controllers/Order");
+// const fetchAllOrders = require("../controllers/Order");
 
 /* ==================
-            Products routes
+            Products routes // Malik Arslan Asif
             ======================*/
-router.post("/products", createProduct);
-router.get("/products", fetchAllProducts);
-router.get("/products/:id", fetchProductById);
-router.patch("/products/:id", updateProduct);
+router.post("/products", productController.createProduct);
+router.get("/products", productController.fetchAllProducts);
+router.get("/products/:id", productController.fetchProductById);
+router.patch("/products/:id", productController.updateProduct);
 
- /* ==================
+/* ==================
              Products brands routes
              ======================*/
-router.post("/brands", createBrand);
-router.get("/brands", fetchBrands);
+router.post("/brands", brandController.createBrand);
+router.get("/brands", brandController.fetchBrands);
 
-
- /* ==================
+/* ==================
              Products category routes
              ======================*/
-router.post("/categories", createCategory);
-router.get("/categories", fetchCategories);
+router.post("/categories", categoryController.createCategory);
+router.get("/categories", categoryController.fetchCategories);
 
-
- /* ==================
-             User routes
+/* ==================
+             User routes // Arslan 
              ======================*/
-router.get("users/:id", fetchUserById);
-router.get("/users/:id", updateUserById);
+router.get("/users/:id", userController.fetchUserById);
+router.patch("/users/:id", userController.updateUserById);
 
-
- /* ==================
+/* ==================
              User  auth routes
              ======================*/
 
-router.post("/users/signup", createUser);
-router.post("/users/login", loginUser);
+router.post("/users/signup", userController.createUser);
+router.post("/users/login", userController.loginUser);
 
- /* ==================
+/* ==================
              cart routes
              ======================*/
-router.post("/cart", addToCart);
-router.get("/cart", getItemsByUserId);
-router.patch("/cart/:id", updateCart);
-router.delete("/cart/:id", deleteItemFromCart);
-router.delete("/cart/:id", resetCart);
-
+router.post("/cart", cartController.addToCart);
+router.get("/cart", cartController.getItemsByUserId);
+router.patch("/cart/:id", cartController.updateCart);
+router.delete("/cart/:id", cartController.deleteItemFromCart);
+// router.delete("/cart/:id", cartController.resetCart);
 
 /* ==================
              order routes
              ======================*/
-router.post("/orders", createOrder);
-router.get("/orders", getOrdersByUserId);
-router.get("/orders/:id", deleteOrder);
-router.patch("/orders/:id", updateOrder);
+router.post("/orders", orderController.createOrder);
+router.get("/orders", orderController.getOrdersByUserId);
+router.get("/orders/:id", orderController.deleteOrder);
+router.patch("/orders/:id", orderController.updateOrder);
 
 /* ==================
              admin order routes
              ======================*/
-router.get("/orders", fetchAllOrders);
+// router.get("/orders", fetchAllOrders);
 
 module.exports = router;
