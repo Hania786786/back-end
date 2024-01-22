@@ -22,6 +22,7 @@ app.use(
 
 // Middlewares
 app.use(express.json()); // to parse req.body
+app.use("/products", productRouter.router);
 app.use(router);
 
 app.get("/", (req, res) => {
