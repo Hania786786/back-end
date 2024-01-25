@@ -15,7 +15,7 @@ app.use(
     exposedHeaders: ["X-Total-Count"],
   })
 );
-// morgan check Arslan
+// morgan check
 app.use(
   morgan(":method :url :status :res[content-length] - :response-time ms")
 );
