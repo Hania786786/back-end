@@ -1,5 +1,5 @@
 
-const Product = require(
+const Product =
                         ../models/Product
 
 /* ==================
