@@ -1,5 +1,5 @@
 
-const Product =
+
                         ../models/Product
 
 /* ==================
