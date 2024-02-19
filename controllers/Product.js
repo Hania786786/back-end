@@ -1,4 +1,4 @@
-const Product = 
+const Product = require(" ")
 
                         ../models/Product
 
