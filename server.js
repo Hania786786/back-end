@@ -15,7 +15,7 @@ app.use(
     exposedHeaders: ["X-Total-Count"],
   })
 );
-// morgan check Arslan
+// morgan check
 app.use(
   morgan(":method :url :status :res[content-length] - :response-time ms")
 );
@@ -24,6 +24,7 @@ app.use(
 app.use(express.json()); // to parse req.body
 app.use("/products", productRouter.router);
 app.use("/category", categoryRouter.router);
+app.use("/cart", cartRouter);
 app.use(router);
 
 app.get("/", (req, res) => {

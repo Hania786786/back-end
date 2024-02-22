@@ -71,5 +71,4 @@ productSchema.set("toJSON", {
     delete ret._id;
   },
 });
-
-export.Product = mongoose.model("Product", productSchema);
+exports.Product = mongoose.model("Product", productSchema);
