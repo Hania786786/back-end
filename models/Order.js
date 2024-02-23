@@ -35,5 +35,4 @@ orderSchema.set("toJSON", {
   },
 });
 
- Order = mongoose.model("Order", orderSchema);
-exports 
+exports Order = mongoose.model("Order", orderSchema);
