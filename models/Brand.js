@@ -29,3 +29,4 @@ brandSchema.set("toJSON", {
 });
 
 exports.Brand = mongoose.model("Brand", brandSchema);
+
