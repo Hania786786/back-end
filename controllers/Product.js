@@ -1,7 +1,7 @@
 const Product = require("../models/Product");
 
 /* ==================
-            Products CRUD
+            Products
             
 
 // create product  -- create -- post
