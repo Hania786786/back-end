@@ -2,7 +2,7 @@ const Product = require("../models/Product");
 
 /* ==================
             Products CRUD
-            ======================*/
+            
 
 // create product  -- create -- post
 const createProduct = async (req, res) => {
