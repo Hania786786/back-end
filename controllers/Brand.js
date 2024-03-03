@@ -1,6 +1,6 @@
 const Brand = require("../models/Brand");
 
-// create brand  -- create -- post
+// create brand -- post
 const createBrand = async (req, res) => {
   try {
     const { label, value } = req.body;
