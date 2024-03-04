@@ -1,6 +1,6 @@
 const Cart = require("../models/Cart")
 
-// add to cart
+// add-to-cart
 const addToCart = async (req, res) => {
   // response 200 but not data is not saved into db
   try {
