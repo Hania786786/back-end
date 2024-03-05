@@ -1,6 +1,6 @@
 const User = require("../models/User");
 
-// fetch all categories -- get -- read
+// fetch all categories get 
 const fetchUserById = async (req, res) => {
   const { id } = req.params;
   try {
@@ -11,7 +11,7 @@ const fetchUserById = async (req, res) => {
   }
 };
 
-// update user by id -- update -- PATCH
+// update user by id -- update 
 const updateUserById = async (req, res) => {
   try {
     const { id } = req.params;
@@ -25,7 +25,7 @@ const updateUserById = async (req, res) => {
 /* ====================
         Auth 
         ====================*/
-// create user -- signup  -- create -- post
+// create user -- signup  
 const createUser = async (req, res) => {
   // TODO: 400 -- Incorrect email
   try {
