@@ -11,7 +11,7 @@ const fetchUserById = async (req, res) => {
   }
 };
 
-// update user by id -- update -- PATCH
+// update user by id -- update 
 const updateUserById = async (req, res) => {
   try {
     const { id } = req.params;
