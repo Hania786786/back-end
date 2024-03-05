@@ -25,7 +25,7 @@ const updateUserById = async (req, res) => {
 /* ====================
         Auth 
         ====================*/
-// create user -- signup  -- create -- post
+// create user -- signup  -- create
 const createUser = async (req, res) => {
   // TODO: 400 -- Incorrect email
   try {
