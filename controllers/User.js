@@ -1,6 +1,6 @@
 const User = require("../models/User");
 
-// fetch all categories
+// fetch categories
 const fetchUserById = async (req, res) => {
   const { id } = req.params;
   try {
