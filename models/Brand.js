@@ -7,7 +7,7 @@ const brandSchema = new mongoose.Schema({
     type: String,
     required: true,
     unique: true,
-    // Arslan Test
+    // Arslan 
   },
   value: {
     type: String,
