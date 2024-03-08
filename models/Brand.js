@@ -6,8 +6,7 @@ const brandSchema = new mongoose.Schema({
   label: {
     type: String,
     required: true,
-    unique: true,
-    // Arslan 
+    unique: true
   },
   value: {
     type: String,
