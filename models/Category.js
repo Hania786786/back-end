@@ -1,5 +1,6 @@
-const mongoose = require("mongoose");
-const { Schema } = mongoose;
+const mongoose = require("mongoose")
+const { Schema } = mongoose
+
 const categorySchema = new mongoose.Schema({
   label: {
     type: String,
@@ -11,13 +12,13 @@ const categorySchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
-});
+})
 
 // Turning _id to id
 const virtual = categorySchema.virtual("id");
 virtual.get(() => {
   return this._id;
-});
+})
 categorySchema.set("toJSON", {
   virtuals: true,
   versionKey: false,
