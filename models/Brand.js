@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
+// brand model schema
 const brandSchema = new mongoose.Schema({
   label: {
     type: String,
     required: true,
-    unique: true,
-    // Arslan Test
+    unique: true
   },
   value: {
     type: String,
@@ -20,6 +20,7 @@ const virtual = brandSchema.virtual("id");
 virtual.get(() => {
   return this._id;
 });
+
 brandSchema.set("toJSON", {
   virtuals: true,
   versionKey: false,
