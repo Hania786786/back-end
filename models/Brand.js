@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-// brand model
+// brand model schema
 const brandSchema = new mongoose.Schema({
   label: {
     type: String,
