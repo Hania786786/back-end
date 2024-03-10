@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const { Schema } = mongoose;
+const mongoose = require("mongoose")
+const { Schema } = mongoose
 
 // Product model
 const productSchema = new mongoose.Schema({
@@ -63,7 +63,7 @@ const productSchema = new mongoose.Schema({
 const virtual = productSchema.virtual("id");
 virtual.get(() => {
   return this._id;
-});
+})
 productSchema.set("toJSON", {
   virtuals: true,
   versionKey: false,
