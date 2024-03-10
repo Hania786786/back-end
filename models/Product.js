@@ -63,7 +63,7 @@ const productSchema = new mongoose.Schema({
 const virtual = productSchema.virtual("id");
 virtual.get(() => {
   return this._id;
-});
+})
 productSchema.set("toJSON", {
   virtuals: true,
   versionKey: false,
