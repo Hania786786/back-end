@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 require("../config/conn");
+
 // importing controllers
 const productController = require("../controllers/Product");
 // const createProduct = require("../controllers/Product");
