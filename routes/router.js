@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-require("../config/conn");
+
 // importing controllers
 const productController = require("../controllers/Product");
 // const createProduct = require("../controllers/Product");
@@ -24,7 +24,7 @@ const orderController = require("../controllers/Order");
 // const fetchAllOrders = require("../controllers/Order");
 
 /* ==================
-            Products routes // Malik Arslan Asif
+            Products routes
             ======================*/
 router.post("/products", productController.createProduct);
 router.get("/products", productController.fetchAllProducts);
@@ -44,7 +44,7 @@ router.post("/categories", categoryController.createCategory);
 router.get("/categories", categoryController.fetchCategories);
 
 /* ==================
-             User routes // Arslan 
+             User routes
              ======================*/
 router.get("/users/:id", userController.fetchUserById);
 router.patch("/users/:id", userController.updateUserById);
