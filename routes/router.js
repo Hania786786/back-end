@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-require("../config/conn");
+require("..
 
 // importing controllers
 const productController = require("../controllers/Product");
