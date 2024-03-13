@@ -24,7 +24,7 @@ const orderController = require("../controllers/Order");
 // const fetchAllOrders = require("../controllers/Order");
 
 /* ==================
-            Products routes // Malik Arslan Asif
+            Products routes
             ======================*/
 router.post("/products", productController.createProduct);
 router.get("/products", productController.fetchAllProducts);
@@ -44,7 +44,7 @@ router.post("/categories", categoryController.createCategory);
 router.get("/categories", categoryController.fetchCategories);
 
 /* ==================
-             User routes // Arslan 
+             User routes
              ======================*/
 router.get("/users/:id", userController.fetchUserById);
 router.patch("/users/:id", userController.updateUserById);
