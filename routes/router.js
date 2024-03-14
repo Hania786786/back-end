@@ -59,10 +59,10 @@ router.post("/users/login", loginUser);
 /* ==================
              cart routes
              ======================*/
-router.post("/cart", cartController.addToCart);
-router.get("/cart", cartController.getItemsByUserId);
-router.patch("/cart/:id", cartController.updateCart);
-router.delete("/cart/:id", cartController.deleteItemFromCart);
+router.post("/cart", addToCart);
+router.get("/cart", getItemsByUserId);
+router.patch("/cart/:id", updateCart);
+router.delete("/cart/:id", deleteItemFromCart);
 
 /* ==================
              order routes
