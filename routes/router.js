@@ -10,18 +10,18 @@ const productController = require("../controllers/Product");
 const brandController = require("../controllers/Brand");
 // const createBrand = require("../controllers/Brand");
 const categoryController = require("../controllers/Category");
-// const fetchCategories = require("../controllers/Category");
+const fetchCategories = require("../controllers/Category");
 const userController = require("../controllers/User");
 const cartController = require("../controllers/Cart");
-// const getItemsByUserId = require("../controllers/Cart");
-// const updateCart = require("../controllers/Cart");
-// const deleteItemFromCart = require("../controllers/Cart");
-// const resetCart = require("../controllers/Cart");
+const getItemsByUserId = require("../controllers/Cart");
+const updateCart = require("../controllers/Cart");
+const deleteItemFromCart = require("../controllers/Cart");
+const resetCart = require("../controllers/Cart");
 const orderController = require("../controllers/Order");
-// const getOrdersByUserId = require("../controllers/Order");
-// const updateOrder = require("../controllers/Order");
-// const deleteOrder = require("../controllers/Order");
-// const fetchAllOrders = require("../controllers/Order");
+const getOrdersByUserId = require("../controllers/Order");
+const updateOrder = require("../controllers/Order");
+const deleteOrder = require("../controllers/Order");
+const fetchAllOrders = require("../controllers/Order");
 
 /* ==================
             Products routes
@@ -63,7 +63,6 @@ router.post("/cart", cartController.addToCart);
 router.get("/cart", cartController.getItemsByUserId);
 router.patch("/cart/:id", cartController.updateCart);
 router.delete("/cart/:id", cartController.deleteItemFromCart);
-// router.delete("/cart/:id", cartController.resetCart);
 
 /* ==================
              order routes
@@ -76,6 +75,6 @@ router.patch("/orders/:id", orderController.updateOrder);
 /* ==================
              admin order routes
              ======================*/
-// router.get("/orders", fetchAllOrders);
+router.get("/orders", fetchAllOrders);
 
 module.exports = router;
