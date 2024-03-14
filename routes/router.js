@@ -67,10 +67,10 @@ router.delete("/cart/:id", deleteItemFromCart);
 /* ==================
              order routes
              ======================*/
-router.post("/orders", orderController.createOrder);
-router.get("/orders", orderController.getOrdersByUserId);
-router.get("/orders/:id", orderController.deleteOrder);
-router.patch("/orders/:id", orderController.updateOrder);
+router.post("/orders", createOrder);
+router.get("/orders", getOrdersByUserId);
+router.get("/orders/:id", deleteOrder);
+router.patch("/orders/:id", updateOrder);
 
 /* ==================
              admin order routes
