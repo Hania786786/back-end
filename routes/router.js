@@ -40,8 +40,8 @@ router.get("/brands", fetchBrands);
 /* ==================
              Products category routes
              ======================*/
-router.post("/categories", categoryController.createCategory);
-router.get("/categories", categoryController.fetchCategories);
+router.post("/categories", createCategory);
+router.get("/categories", fetchCategories);
 
 /* ==================
              User routes
