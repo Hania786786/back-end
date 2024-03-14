@@ -53,8 +53,8 @@ router.patch("/users/:id", updateUserById);
              User  auth routes
              ======================*/
 
-router.post("/users/signup", userController.createUser);
-router.post("/users/login", userController.loginUser);
+router.post("/users/signup", createUser);
+router.post("/users/login", loginUser);
 
 /* ==================
              cart routes
