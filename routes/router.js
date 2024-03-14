@@ -46,8 +46,8 @@ router.get("/categories", fetchCategories);
 /* ==================
              User routes
              ======================*/
-router.get("/users/:id", userController.fetchUserById);
-router.patch("/users/:id", userController.updateUserById);
+router.get("/users/:id", fetchUserById);
+router.patch("/users/:id", updateUserById);
 
 /* ==================
              User  auth routes
