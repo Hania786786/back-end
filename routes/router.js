@@ -28,8 +28,8 @@ const fetchAllOrders = require("../controllers/Order");
             ======================*/
 router.post("/products", createProduct);
 router.get("/products", fetchAllProducts);
-router.get("/products/:id", productController.fetchProductById);
-router.patch("/products/:id", productController.updateProduct);
+router.get("/products/:id", fetchProductById);
+router.patch("/products/:id", updateProduct);
 
 /* ==================
              Products brands routes
