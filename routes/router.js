@@ -34,8 +34,8 @@ router.patch("/products/:id", updateProduct);
 /* ==================
              Products brands routes
              ======================*/
-router.post("/brands", brandController.createBrand);
-router.get("/brands", brandController.fetchBrands);
+router.post("/brands", createBrand);
+router.get("/brands", fetchBrands);
 
 /* ==================
              Products category routes
