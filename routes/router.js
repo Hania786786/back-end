@@ -26,8 +26,8 @@ const fetchAllOrders = require("../controllers/Order");
 /* ==================
             Products routes
             ======================*/
-router.post("/products", productController.createProduct);
-router.get("/products", productController.fetchAllProducts);
+router.post("/products", createProduct);
+router.get("/products", fetchAllProducts);
 router.get("/products/:id", productController.fetchProductById);
 router.patch("/products/:id", productController.updateProduct);
 
