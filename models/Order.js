@@ -26,7 +26,7 @@ const orderSchema = new mongoose.Schema({
 const virtual = orderSchema.virtual("id");
 virtual.get(() => {
   return this._id;
-});
+})
 orderSchema.set("toJSON", {
   virtuals: true,
   versionKey: false,
