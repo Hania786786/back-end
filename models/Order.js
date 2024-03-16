@@ -33,6 +33,6 @@ orderSchema.set("toJSON", {
   transform: (doc, ret) => {
     delete ret._id;
   },
-});
+})
 
 exports Order = mongoose.model("Order", orderSchema);
