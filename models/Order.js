@@ -20,7 +20,7 @@ const orderSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-});
+})
 
 // Turning _id to id
 const virtual = orderSchema.virtual("id");
