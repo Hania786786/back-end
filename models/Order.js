@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const { Schema } = mongoose;
+const mongoose = require("mongoose")
+const { Schema } = mongoose
 
 const orderSchema = new mongoose.Schema({
   items: [{ type: [Schema.Mixed.Types], required: true }],
@@ -20,19 +20,19 @@ const orderSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-});
+})
 
 // Turning _id to id
 const virtual = orderSchema.virtual("id");
 virtual.get(() => {
   return this._id;
-});
+})
 orderSchema.set("toJSON", {
   virtuals: true,
   versionKey: false,
   transform: (doc, ret) => {
     delete ret._id;
   },
-});
+})
 
-exports Order = mongoose.model("Order", orderSchema);
+exports Order = mongoose.model("Order", orderSchema)
