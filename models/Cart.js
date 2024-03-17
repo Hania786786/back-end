@@ -57,7 +57,7 @@ cartSchema.set("toJSON", {
   transform: (doc, ret) => {
     delete ret._id;
   },
-});
+})
 
-const Cart = mongoose.model("Cart", cartSchema);
-module.exports = Cart;
+const Cart = mongoose.model("Cart", cartSchema)
+module.exports = Cart
