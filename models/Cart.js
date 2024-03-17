@@ -50,7 +50,7 @@ const cartSchema = new mongoose.Schema({
 const virtual = cartSchema.virtual("id");
 virtual.get(() => {
   return this._id;
-});
+})
 cartSchema.set("toJSON", {
   virtuals: true,
   versionKey: false,
