@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const { Schema } = mongoose;
+const mongoose = require("mongoose")
+const { Schema } = mongoose
 
 const cartSchema = new mongoose.Schema({
   title: {
@@ -50,14 +50,14 @@ const cartSchema = new mongoose.Schema({
 const virtual = cartSchema.virtual("id");
 virtual.get(() => {
   return this._id;
-});
+})
 cartSchema.set("toJSON", {
   virtuals: true,
   versionKey: false,
   transform: (doc, ret) => {
     delete ret._id;
   },
-});
+})
 
-const Cart = mongoose.model("Cart", cartSchema);
-module.exports = Cart;
+const Cart = mongoose.model("Cart", cartSchema)
+module.exports = Cart
