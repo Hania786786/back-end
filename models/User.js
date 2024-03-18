@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema({
     default: "user",
   },
   addresses: { type: [String] },
-  // TODO: We can make separate schema for this
+  
   name: { type: String },
   orders: { type: [String] },
 });
