@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-const { Schema } = mongoose;
+const { Schema } = mongoose
 
 const userSchema = new mongoose.Schema({
   email: {
@@ -18,7 +18,6 @@ const userSchema = new mongoose.Schema({
     default: "user",
   },
   addresses: { type: [String] },
-  // TODO: We can make separate schema for this
   name: { type: String },
   orders: { type: [String] },
 });
@@ -34,6 +33,6 @@ userSchema.set("toJSON", {
   transform: (doc, ret) => {
     delete ret._id;
   },
-});
+})
 
- exports.User = mongoose.model("User", userSchema);
+ exports.User = mongoose.model("User", userSchema)
