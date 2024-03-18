@@ -34,6 +34,6 @@ userSchema.set("toJSON", {
   transform: (doc, ret) => {
     delete ret._id;
   },
-});
+})
 
  exports.User = mongoose.model("User", userSchema)
