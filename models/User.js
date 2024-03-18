@@ -18,7 +18,6 @@ const userSchema = new mongoose.Schema({
     default: "user",
   },
   addresses: { type: [String] },
-  
   name: { type: String },
   orders: { type: [String] },
 });
