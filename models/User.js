@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-const { Schema } = mongoose;
+const { Schema } = mongoose
 
 const userSchema = new mongoose.Schema({
   email: {
@@ -36,4 +36,4 @@ userSchema.set("toJSON", {
   },
 });
 
- exports.User = mongoose.model("User", userSchema);
+ exports.User = mongoose.model("User", userSchema)
