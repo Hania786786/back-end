@@ -11,7 +11,6 @@ const updateProduct = require("../controllers/Product");
 
 
             Products routes
-            ======================*/
 router.post("/products", createProduct);
 router.get("/products", fetchAllProducts);
 router.get("/products/:id", fetchProductById);
