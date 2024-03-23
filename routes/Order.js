@@ -10,7 +10,7 @@ const fetchAllOrders = require("../controllers/Order");
 
 
              order routes
-             ======================*/
+          
 router.post("/orders", createOrder);
 router.get("/orders", getOrdersByUserId);
 router.get("/orders/:id", deleteOrder);
