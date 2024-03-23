@@ -8,7 +8,7 @@ const deleteOrder = require("../controllers/Order");
 const fetchAllOrders = require("../controllers/Order");
 
 
-/* ==================
+
              order routes
              ======================*/
 router.post("/orders", createOrder);
