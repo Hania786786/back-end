@@ -3,7 +3,7 @@ const router = express.Router();
 
 // importing controllers
 
-const createProduct = require("../controllers/Product");
+
 const fetchAllProducts = require("../controllers/Product");
 const fetchProductById = require("../controllers/Product");
 const updateProduct = require("../controllers/Product");
