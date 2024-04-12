@@ -4,7 +4,7 @@ const router = express.Router();
 // importing controllers
 
 
-const fetchProductById = require("../controllers/Product");
+const fetchProductById = 
 const updateProduct = require("../controllers/Product");
 const brandController = require("../controllers/Brand");
 const createBrand = require("../controllers/Brand");
