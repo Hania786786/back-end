@@ -5,7 +5,7 @@ const router = express.Router();
 
 
 
-const updateProduct = require("../controllers/Product");
+const updateProduct = 
 const brandController = require("../controllers/Brand");
 const createBrand = require("../controllers/Brand");
 const categoryController = require("../controllers/Category");
