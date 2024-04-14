@@ -2,6 +2,6 @@ const express = require("express");
 const router = express.Router();
 
 
-// Products category routes
+// category controller imports
 const categoryController = require("../controllers/Category");
 const fetchCategories = require("../controllers/Category");
