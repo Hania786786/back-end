@@ -11,3 +11,4 @@ const fetchCategories = require("../controllers/Category");
              Products category routes
              ======================*/
 router.post("/categories", createCategory);
+router.get("/categories", fetchCategories);
