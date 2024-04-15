@@ -10,3 +10,4 @@ const createBrand = require("../controllers/Brand");
              Products brands routes
              ======================*/
 router.post("/brands", createBrand);
+router.get("/brands", fetchBrands);
