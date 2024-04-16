@@ -13,3 +13,4 @@ const resetCart = require("../controllers/Cart");
              ======================*/
 router.post("/cart", addToCart);
 router.get("/cart", getItemsByUserId);
+router.patch("/cart/:id", updateCart);
