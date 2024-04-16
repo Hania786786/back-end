@@ -7,3 +7,7 @@ const getItemsByUserId = require("../controllers/Cart");
 const updateCart = require("../controllers/Cart");
 const deleteItemFromCart = require("../controllers/Cart");
 const resetCart = require("../controllers/Cart");
+
+/* ==================
+             cart routes
+             ======================*/
