@@ -4,5 +4,5 @@ const router = express.Router();
 /* ==================
              User routes // ShahbazKhalidDev 
              ======================*/
-router.get("/users/:id", userController.fetchUserById);
+router.get("/users/:id", fetchUserById);
 router.patch("/users/:id", userController.updateUserById);
