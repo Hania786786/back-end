@@ -5,7 +5,7 @@ const router = express.Router();
 
 
 
-const brandController = require("../controllers/Brand");
+
 const createBrand = require("../controllers/Brand");
 const categoryController = require("../controllers/Category");
 const fetchCategories = require("../controllers/Category");
