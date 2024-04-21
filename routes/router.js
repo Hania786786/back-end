@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 
 // importing controllers
-
 const fetchCategories = require("../controllers/Category");
 const userController = require("../controllers/User");
 const cartController = require("../controllers/Cart");
