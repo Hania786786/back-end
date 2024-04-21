@@ -3,10 +3,6 @@ const router = express.Router();
 
 // importing controllers
 
-
-
-
-const createBrand = require("../controllers/Brand");
 const categoryController = require("../controllers/Category");
 const fetchCategories = require("../controllers/Category");
 const userController = require("../controllers/User");
